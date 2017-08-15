@@ -1,5 +1,5 @@
 class Drop{
- // ParticleSystem ps;
+ ParticleSystem ps;
  
  
     float x;
@@ -35,7 +35,7 @@ show();
   }
   
 boolean isDead(){
-if(y >= height){
+if(getY() >= height-60){
 return true;
 }
 else return false;
@@ -54,7 +54,22 @@ void show(){
   strokeWeight(thick+1);
   stroke(35,201,255); // change to random colour
   line(x+2,y,x-1,y+length);
-  
+
 
 }
+
+float getY(){
+return this.y;
+}
+
+float getX(){
+return this.x;
+}
+
+void drawParticle(){
+ps = new ParticleSystem(new PVector(getX(),getY()));
+ps.addParticle();
+ps.run();
+}
+
 }

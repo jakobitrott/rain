@@ -18,6 +18,7 @@ class DropSystem {
     
     if(d.isDead()){
       drops.remove(i);
+      d.drawParticle();
   }
 }
 }

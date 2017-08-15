@@ -1,8 +1,10 @@
 DropSystem drop;
+ParticleSystem ps;
 
 void setup(){
 size(640, 360);
 drop = new DropSystem();
+
 }
 
 void draw(){
@@ -10,6 +12,7 @@ void draw(){
  //drop.addDrop();
   //drop.run();
  drawGrass();
+
  drawSun();
   drop.addDrop();
   drop.run();
